@@ -6,14 +6,14 @@ export default function Topbar({ menuOpen, setmenuOpen }) {
     <div className={"topbar " + (menuOpen && "active")}>
       <div className="wrapper">
         <div className="left">
-          <a href="#intro" className="logo">genius.</a>
+          <a href="#intro" className="logo">Apaydin.</a>
           <div className="itemContainer">
             <Person className="icon"/>
             <span>+90 505 417 9446</span>
           </div>
           <div className="itemContainer">
             <Mail className="icon"/>
-            <span>aapaydin@magiclick.com</span>
+            <span>atakanapaydinn@gmail.com</span>
           </div>
         </div>
         <div className="right">

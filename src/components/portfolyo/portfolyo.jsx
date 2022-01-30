@@ -1,59 +1,36 @@
 import {useState, useEffect} from 'react';
 import './portfolyo.scss';
 import PortfolyoList from '../portfolyoList/portfolyoList';
-import {webPortfolio, featuredPortfolio, mobilePortfolio, designPortfolio, contentPortfolio} from '../../data';
+import {webPortfolio, lastPortfolio} from '../../data';
 
 export default function Portfolyo() {
-  const [selected, setSelected] = useState('featured');
+  const [selected, setSelected] = useState('last');
   const [data, setData] = useState([]);
 
   const list = [
     {
-      id: 'featured',
-      title: 'Featured',
+      id: 'last',
+      title: 'Son Uygulamalar',
     },
     {
       id: 'web',
-      title: 'Web',
-    },
-    {
-      id: 'mobile',
-      title: 'Mobile App',
-    },
-    {
-      id: 'graphic',
-      title: 'Graphic Design',
-    },
-    {
-      id: 'content',
-      title: 'Content',
-    },
+      title: 'Tüm Web Uygulamaları',
+    }
   ];
 
   useEffect(() => {
 
     switch(selected){
-      case 'featured':
-        setData(featuredPortfolio);
+      case 'last':
+        setData(lastPortfolio);
         break;
 
         case 'web':
         setData(webPortfolio);
         break;
         
-        case 'mobile':
-        setData(mobilePortfolio);
-        break;
-        
-        case 'design':
-        setData(designPortfolio);
-        break;
-        
-        case 'content':
-        setData(contentPortfolio);
-        break;
         default:
-        setData(featuredPortfolio);
+        setData(lastPortfolio);
     }
 
   }, [selected]);

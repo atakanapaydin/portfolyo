@@ -9,28 +9,21 @@ export default function Work() {
       id: '1',
       icon: './assets/mobile.png',
       title: 'Web Design',
-      desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      desc: 'Geliştirmesinde en uzun bulunduğum ve birçok yönden beni en fazla geliştiren web sayfasın Türk Telekom DİGITT web sitesine en önde yer vermek istedim',
       img: 'https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930',
     },
     {
       id: '2',
       icon: './assets/globe.png',
-      title: 'Mobile Application',
-      desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      img: 'https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg',
-    },
-    {
-      id: '3',
-      icon: './assets/writing.png',
-      title: 'Branding',
-      desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      img: 'https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg',
-    },
+      title: 'Web Design',
+      desc: 'Vue.js ile yazılan ve benim vue deneyimi kazanmama olanak sağlayan NYFX web sitesi',
+      img: 'https://mir-s3-cdn-cf.behance.net/projects/404/ab1ee8126550151.Y3JvcCwyNzI4LDIxMzQsMzMsMA.png',
+    }
   ];
 
   const handleClick = way => {
     way === 'left'
-      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
+      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 1)
       : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
   };
 
@@ -47,7 +40,7 @@ export default function Work() {
                   </div>
                   <h2>{d.title}</h2>
                   <p>{d.desc}</p>
-                  <span>Pojects</span>
+                  <span><a href="#portfolyo">Projeler</a> </span>
                 </div>
               </div>
               <div className="right">
@@ -57,8 +50,8 @@ export default function Work() {
           </div>
         ))}
       </div>
-      <img src="assets/arrow.png" className="arrow left" alt="" onClick={() => handleClick('left')} />
-      <img src="assets/arrow.png" className="arrow right" alt="" onClick={() => handleClick('right')} />
+      <img src="assets/arrow.png" className="arrow left" alt="Arrow Left" onClick={() => handleClick('left')} />
+      <img src="assets/arrow.png" className="arrow right" alt="Arrow Right" onClick={() => handleClick('right')} />
     </div>
   );
 }

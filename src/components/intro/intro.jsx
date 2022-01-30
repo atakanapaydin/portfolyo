@@ -11,7 +11,7 @@ export default function Intro() {
       init(textRef.current, 
         { showCursor: true,
           backDelay : 1500,
-          strings: ['Developer', 'Computer Engineer' ] })
+          strings: ['Bilgisayar Mühendisi','Yazılımcı'] })
     },[]);
 
   return(
@@ -23,9 +23,9 @@ export default function Intro() {
       </div>
       <div className="right">
         <div className="wrapper">
-          <h2>Hi There, I'm</h2>
+          <h2>Merhaba, Ben</h2>
           <h1>Atakan APAYDIN</h1>
-          <h3>FullTime <span ref={textRef}></span></h3>
+          <h3> <span ref={textRef}></span></h3>
         </div>
         <a href="#portfolyo">
           <img src="assets/down.png" alt="Down" />
