@@ -15,6 +15,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include mobile{
+            padding: 10px;
+        }
+
         .left{
             display: flex;
             align-items: center;
@@ -24,6 +29,11 @@
                 text-decoration: none;
                 color: inherit;
                 margin-right: 40px;
+
+                @include mobile{
+                    font-size: 30px;
+                    margin-right: 0;
+                }
             }
             .itemContainer{
                 display: flex;
@@ -43,6 +53,12 @@
                 }
             }
         }
+        .center{
+            display: flex;
+            .itemContainer{
+                margin-left: 30px;
+            }
+        }
         .right{
             .hamburger{
                 width: 32px;
@@ -51,6 +67,11 @@
                 flex-direction: column;
                 justify-content: space-between;
                 cursor: pointer;
+
+                @include mobile{
+                    width: 22px;
+                    height: 22px;
+                }
                 span{
                     width: 125%;
                     height: 3px;
@@ -64,6 +85,10 @@
     &.active{
         background-color: $main-color;
         color: white;
+        a{
+            color: white;
+        }
+        
         .hamburger{
             span{
                 &:first-child{
